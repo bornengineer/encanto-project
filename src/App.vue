@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div class="container">
     <div id="logotext">
       <router-link id="logo" to="/">
         <img
@@ -7,7 +7,6 @@
         />
       </router-link>
       <h1>ENCANTO</h1>
-      <br />
     </div>
     <div id="navs">
       <router-link to="/">Home</router-link>
@@ -15,8 +14,19 @@
       <router-link to="/services">Services</router-link>
       <router-link to="/contact">Contact us</router-link>
     </div>
+    <div class="ham-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+    <div class="hamburger">
+      <div class="hamburger-list">
+        <router-link class="ham-list" to="/">Home</router-link>
+        <router-link class="ham-list" to="/about">About</router-link>
+        <router-link class="ham-list" to="/services">Services</router-link>
+        <router-link class="ham-list" to="/contact">Contact us</router-link>
+      </div>
+    </div>
   </div>
-  <div class="container">
+  <div class="container-i">
     <div class="sicons">
       <ul>
         <li>
@@ -45,8 +55,31 @@
   <router-view />
 </template>
 
+<script>
+let toggle = false;
+let nav = document.getElementsByClassName("hamburger")[0];
+console.log(toggle, nav);
+document.getElementsByClassName("ham-toggle")[0].onclick = function () {
+  if (!toggle) {
+    nav.classList.add("visible");
+    toggle = !toggle;
+  }
+};
+</script>
+
+
 <style scoped>
-/* .container {height: 100vh; width:1px; z-index: -1;} */
+.container {
+  height: 100px;
+  max-width: 100%;
+  border: 2px solid black;
+  margin: 0;
+  background: url("../public/blue-259458.jpg") right;
+  background-position: right center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .sicons {
   float: left;
   display: flex;
@@ -56,13 +89,13 @@
   top: 40%;
   left: -3.2%;
   margin-right: 40px;
-  background-color:rgba(78, 78, 78, 0.5);
-  padding:6px;
-  height:160px;
-  border-radius:15px; 
+  background-color: rgba(78, 78, 78, 0.5);
+  padding: 6px;
+  height: 160px;
+  border-radius: 15px;
   transition: all 0.2s ease;
 }
-.sicons:hover{
+.sicons:hover {
   box-shadow: 0px 0px 8px 1px white;
 }
 .sicons ul {
@@ -79,9 +112,8 @@
   transform: scale(1.5);
   transition: all 0.2s ease;
   color: #0cb0f1;
-
 }
-.sicons i:hover{
+.sicons i:hover {
   /* color:#2362a1; */
   transform: scale(2);
 }
@@ -94,23 +126,21 @@
 
 #logotext {
   display: flex;
-  justify-content: space-between;
-  /* margin-right:500px; */
-  position: absolute;
-  left: 10%;
+  align-items: center;
   transform: scale(0.85);
+  /* border: 2px solid black; */
+  margin-left: 5vw;
 }
 
 #logotext h1 {
   color: white;
-  margin-top: 0px;
+  /* margin-top: 0px; */
   font-family: opensticks;
 }
 #navs {
-  position: relative;
-  width: inherit;
-  left: 57%;
-  margin-top: 5px;
+  position: absolute;
+  right: 2%;
+  transition: all 0.5s ease;
 }
 
 img {
@@ -118,7 +148,7 @@ img {
   width: 60px;
   filter: grayscale(30%);
   border-radius: 50%;
-  margin: -15px 20px 15px 20px;
+  /* margin: -15px 20px 15px 20px; */
   transition: 0.3s ease-in-out;
 }
 img:hover {
@@ -132,41 +162,86 @@ img:hover {
   src: url(./fonts/open/Opensticks-EOBW.ttf);
 }
 
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
+} */
 
-#nav {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  background: url("../public/blue-259458.jpg") right;
-  background-position: right center;
-  padding: 30px;
-  height: 40px;
-  width: 100em;
-}
-
-#nav a {
+.container a {
   font-weight: bold;
   font-family: monospace, arial;
   color: #a3a3a3;
-  margin: 5px -10px 0 30px;
+  /* margin: 0 0 0 1vw; */
   font-size: 20px;
   transition: 0.5s;
   text-decoration: none;
   position: relative;
 }
 
-#nav a#logo {
-  margin-left: -30px;
+.hamburger-list {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 90px;
+  height: 250px;
+  z-index: 3;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: -12%;
+  padding-top: 10px;
+}
+.ham-list {
+  margin-left: 2vw;
+  margin-top: 5px;
+}
+.hamburger {
+  display: none;
+}
+.ham-toggle {
+  display: none;
+  position: absolute;
+  right: 8vw;
+  color: #a3a3a3;
+  transform: scale(1.5);
+  cursor: pointer;
 }
 
-#nav a::after {
+.visible {
+  display: block !important;
+}
+
+@media (max-width: 960px) {
+  #logotext,
+  #navs {
+    margin: 0 -10px;
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 720px) {
+  #logotext,
+  #navs {
+    margin: 0 -15px;
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 660px) {
+  #navs {
+    display: none;
+  }
+  .ham-toggle {
+    display: block;
+  }
+}
+
+/* .container a#logo {
+  margin-left: -30px;
+} */
+
+.container a::after {
   content: "\00bb";
   font-size: 27px;
   margin: -15px 5px -15px 5px;
@@ -174,17 +249,17 @@ img:hover {
   transition: 0.5s;
 }
 
-#nav a:hover::after {
+.container a:hover::after {
   opacity: 1;
   padding-right: 10px;
 }
 
-#nav a#logo:hover::after {
+.container a#logo:hover::after {
   opacity: 0;
   padding-right: 0px;
 }
 
-#nav a.router-link-exact-active {
+.container a.router-link-exact-active {
   color: #ffffff;
 }
 </style>
