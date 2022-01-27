@@ -12,19 +12,11 @@
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/services">Services</router-link>
-      <router-link to="/contact">Contact us</router-link>
+      <router-link to="/contact">Contact</router-link>
     </div>
-    <div class="ham-toggle">
+    <!-- <a href="javascript:void(0);" class="ham-toggle" id="toggle" onclick="Myfunction()">
       <i class="fa fa-bars"></i>
-    </div>
-    <div class="hamburger">
-      <div class="hamburger-list">
-        <router-link class="ham-list" to="/">Home</router-link>
-        <router-link class="ham-list" to="/about">About</router-link>
-        <router-link class="ham-list" to="/services">Services</router-link>
-        <router-link class="ham-list" to="/contact">Contact us</router-link>
-      </div>
-    </div>
+    </a> -->
   </div>
   <div class="container-i">
     <div class="sicons">
@@ -54,18 +46,6 @@
   </div>
   <router-view />
 </template>
-
-<script>
-let toggle = false;
-let nav = document.getElementsByClassName("hamburger")[0];
-console.log(toggle, nav);
-document.getElementsByClassName("ham-toggle")[0].onclick = function () {
-  if (!toggle) {
-    nav.classList.add("visible");
-    toggle = !toggle;
-  }
-};
-</script>
 
 
 <style scoped>
@@ -181,7 +161,7 @@ img:hover {
   position: relative;
 }
 
-.hamburger-list {
+/* .hamburger-list {
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.8);
@@ -198,17 +178,17 @@ img:hover {
   margin-left: 2vw;
   margin-top: 5px;
 }
-.hamburger {
+#hamburger {
   display: none;
-}
-.ham-toggle {
+}*/
+/* .ham-toggle {
   display: none;
   position: absolute;
   right: 8vw;
   color: #a3a3a3;
   transform: scale(1.5);
   cursor: pointer;
-}
+} */
 
 .visible {
   display: block !important;
@@ -232,9 +212,9 @@ img:hover {
   #navs {
     display: none;
   }
-  .ham-toggle {
+  /* .ham-toggle {
     display: block;
-  }
+  } */
 }
 
 /* .container a#logo {

@@ -2,6 +2,7 @@
   <!-- <h1>This is an Home page</h1> -->
   <mainComp/>
   <footerMarquee />
+  <hamburger/>
   <!-- <socialIcons/> -->
 </template>
 
@@ -10,6 +11,7 @@
 // import header1 from "@/components/header1.vue";
 import footerMarquee from "@/components/footerMarquee.vue";
 import mainComp from "@/components/mainComp.vue";
+import hamburger from "@/components/hamburger.vue";
 // import socialIcons from "@/components/socialIcons.vue";
 
 export default {
@@ -18,6 +20,7 @@ export default {
     // header1,
     footerMarquee,
     mainComp,
+    hamburger,
     // socialIcons,
   },
 };
