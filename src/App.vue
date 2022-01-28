@@ -52,7 +52,7 @@
 .container {
   height: 100px;
   max-width: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   margin: 0;
   background: url("../public/blue-259458.jpg") right;
   background-position: right center;
@@ -65,15 +65,33 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: fixed;
   top: 40%;
-  left: -3.2%;
-  margin-right: 40px;
+  left: -3%;
+  /* margin-right: 40px; */
   background-color: rgba(78, 78, 78, 0.5);
+  background-size:2em;
   padding: 6px;
-  height: 160px;
+  /* height: 180px; */
   border-radius: 15px;
+  /* width: 100px; */
   transition: all 0.2s ease;
+}
+@media (max-width:960px){
+  .sicons{
+    left:-4%;
+  }
+}
+@media (max-width:720px){
+  .sicons{
+    left:-5%;
+  }
+}
+@media (max-width:540px){
+  .sicons{
+    left:-7%;
+  }
 }
 .sicons:hover {
   box-shadow: 0px 0px 8px 1px white;
@@ -81,12 +99,12 @@
 .sicons ul {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: center;
   margin-left: 10px;
 }
 .sicons li {
   list-style: none;
-  margin: 10px;
+  margin:15px 10px 5px 10px;
 }
 .sicons i {
   transform: scale(1.5);
@@ -142,14 +160,6 @@ img:hover {
   src: url(./fonts/open/Opensticks-EOBW.ttf);
 }
 
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-} */
-
 .container a {
   font-weight: bold;
   font-family: monospace, arial;
@@ -159,39 +169,6 @@ img:hover {
   transition: 0.5s;
   text-decoration: none;
   position: relative;
-}
-
-/* .hamburger-list {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.8);
-  margin-top: 90px;
-  height: 250px;
-  z-index: 3;
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  top: -12%;
-  padding-top: 10px;
-}
-.ham-list {
-  margin-left: 2vw;
-  margin-top: 5px;
-}
-#hamburger {
-  display: none;
-}*/
-/* .ham-toggle {
-  display: none;
-  position: absolute;
-  right: 8vw;
-  color: #a3a3a3;
-  transform: scale(1.5);
-  cursor: pointer;
-} */
-
-.visible {
-  display: block !important;
 }
 
 @media (max-width: 960px) {
@@ -212,19 +189,12 @@ img:hover {
   #navs {
     display: none;
   }
-  /* .ham-toggle {
-    display: block;
-  } */
 }
-
-/* .container a#logo {
-  margin-left: -30px;
-} */
 
 .container a::after {
   content: "\00bb";
   font-size: 27px;
-  margin: -15px 5px -15px 5px;
+  margin: -15px 10px -15px 10px;
   opacity: 0;
   transition: 0.5s;
 }
