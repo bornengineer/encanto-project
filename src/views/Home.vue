@@ -30,7 +30,7 @@ export default {
 body{
   margin: 0;
   background: linear-gradient(180deg, #07203f, black) fixed;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   overflow: hidden;
   /* max-width: 1200px; */
 }

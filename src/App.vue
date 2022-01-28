@@ -44,11 +44,18 @@
       </ul>
     </div>
   </div>
+  <div>
+  <b-button>This is a button</b-button>
+  <b-button href="#">This is a link</b-button>
+</div>
   <router-view />
 </template>
 
 
 <style scoped>
+
+*{box-sizing: border-box;} 
+
 .container {
   height: 100px;
   max-width: 100%;
