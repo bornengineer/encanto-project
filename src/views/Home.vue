@@ -3,6 +3,7 @@
   <mainComp/>
   <footerMarquee />
   <hamburger/>
+  <slide/>
   <!-- <socialIcons/> -->
 </template>
 
@@ -12,6 +13,7 @@
 import footerMarquee from "@/components/footerMarquee.vue";
 import mainComp from "@/components/mainComp.vue";
 import hamburger from "@/components/hamburger.vue";
+import slide from "@/components/slide.vue";
 // import socialIcons from "@/components/socialIcons.vue";
 
 export default {
@@ -21,7 +23,7 @@ export default {
     footerMarquee,
     mainComp,
     hamburger,
-    // socialIcons,
+    slide,
   },
 };
 </script>
@@ -31,7 +33,7 @@ body{
   margin: 0;
   background: linear-gradient(180deg, #07203f, black) fixed;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   /* max-width: 1200px; */
 }
 h1{

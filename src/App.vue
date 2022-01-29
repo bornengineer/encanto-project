@@ -18,7 +18,7 @@
       <i class="fa fa-bars"></i>
     </a> -->
   </div>
-  <div class="container-i">
+  <div class="container-i fixed-top">
     <div class="sicons">
       <ul>
         <li>
