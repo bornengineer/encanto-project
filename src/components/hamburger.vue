@@ -50,12 +50,13 @@ export default {
 } */
 .ham-toggle {
   display: none;
-  position: absolute;
-  right: 12vw;
-  top: 4vh;
+  position: fixed;
+  right: 10vw;
+  top: 30px;
   color: #a3a3a3;
   transform: scale(1.5);
   cursor: pointer;
+  z-index: 10000;
 }
 @media (max-width: 540px) {
   .ham-toggle {

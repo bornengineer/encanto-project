@@ -1,5 +1,17 @@
 <template>
-  <div id="main">
+  <div
+    id="main"
+    class="
+      d-flex
+      justify-content-center
+      flex-column
+      flex-sm-column
+      flex-md-column
+      flex-lg-row
+      flex-xl-row
+      flex-xxl-row
+    "
+  >
     <div id="imgcontainer1" class="flexbox">
       <img
         src="https://cdn.pixabay.com/photo/2019/10/09/07/28/development-4536630_960_720.png"
@@ -44,9 +56,9 @@ span {
   padding: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin-top:10px;
+  margin-top: 10px;
   margin-left: 20px;
 }
 .gradient-text {
@@ -72,7 +84,10 @@ h1 {
   font-weight: 700;
   font-style: italic;
   letter-spacing: 2px;
-  margin-bottom: -5px;
+  /* margin-bottom: -5px; */
+  margin-bottom: 20px;
+  font-size: 35px;
+  text-align: center;
 }
 h3 {
   color: rgb(212, 211, 211);
@@ -80,6 +95,7 @@ h3 {
   font-weight: 400;
   font-style: normal;
   text-align: center;
+  font-size: 20px;
 }
 img {
   height: 110%;
@@ -93,26 +109,36 @@ img {
   flex-direction: column;
 }
 #imgcontainer1 {
-  height: 12vw;
-  width: 12vw;
+  height: 250px;
+  max-width: 250px;
+  width: 250px;
   background-color: rgba(75, 74, 74, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 2%;
   border-radius: 3%;
   position: relative;
+  /* margin: 0 40px 0 0; */
 }
 #imgcontainer2 {
-  height: 12vw;
-  width: 24vw;
+  height: 250px;
+  width: 500px;
+  max-width: 500px;
   background-color: rgba(75, 74, 74, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 2%;
   border-radius: 3%;
+  margin: 0 0 10px 0;
   position: relative;
 }
 
-.flexbox p{
-  color:rgb(161, 161, 161);
+/* @media (max-width: 960px){
+  flex-dir{
+    flex-direction: column;
+  }
+} */
+
+.flexbox p {
+  color: rgb(161, 161, 161);
   margin-bottom: -15px;
 }
 
@@ -120,22 +146,70 @@ img:hover {
   height: 125%;
   width: 125%;
 }
-
-
+.headingtext h1{margin-top:20px; margin-bottom:10px;}
 .headingtext {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* margin: 6% 0 0 8%; */
+  margin: 30px 30px;
   background-color: rgba(5, 47, 54, 0.4);
   border-radius: 10px;
-  padding: 0.1rem 0.1rem 0.1rem 0.1em;
+  padding: 10px;
   width: 40vw;
+  max-width: 500px;
   height: 220px;
+}
+@media (max-width: 960px) {
+  .headingtext {
+    width: 60vw;
+  }
+  #imgcontainer1 {
+    height: 220px;
+    width: 220px;
+  }
+  #imgcontainer2 {
+    height: 220px;
+    width: 440px;
+  }
+  h1{font-size:32px;}
+  h3{font-size:20px;}
+}
+@media (max-width: 720px) {
+  .headingtext {
+    width: 70vw;
+  }
+  #imgcontainer1 {
+    height: 200px;
+    width: 200px;
+  }
+  #imgcontainer2 {
+    height: 200px;
+    width: 400px;
+  }
+  h1{font-size:28px;}
+  h3{font-size:18px;}
+}
+@media (max-width: 540px) {
+  .headingtext {
+    width: 80vw;  
+  }
+  #main {
+    flex-direction: column;
+  }
+  #imgcontainer1 {
+    height: 150px;
+    width: 150px;
+  }
+  #imgcontainer2 {
+    height: 150px;
+    width: 300px;
+  }
+  h1{font-size:22px;}
+  h3{font-size:15px;}
 }
 .summary {
   /* height: 10vw; */
-  width: 30vw;
+  /* width: 30vw; */
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="bottomMarquee">
-    <marquee><p> Create Magic with Software</p></marquee>
+    <marquee><p>We Create Magic with Software</p></marquee>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 p{
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 14px;
 }
 p::before{
@@ -30,10 +30,10 @@ p::after{
     align-items:center;
   position: absolute;
   bottom: 0%;
-  background-color: rgb(0, 46, 54);
+  background: linear-gradient(rgba(2, 75, 88,0.6), rgba(7, 88, 143,0.6), rgba(0, 46, 54,0.6 ));
   height: 30px;
   width: 100vw;
   position:fixed;
-  color: rgb(128, 128, 128);
+  color: rgb(175, 170, 170);
 }
 </style>

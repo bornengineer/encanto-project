@@ -16,7 +16,7 @@
       >
       <span
         ><a href="tel:+91-9425350689"
-          ><i class="fa fa-phone"></i>+91-9425350689</a
+          ><i class="fa fa-phone"></i>+91-7869048146</a
         ></span
       >
     </div>
@@ -66,8 +66,8 @@
 }
 
 .contInfo {
-  position: fixed;
-  right: 10%;
+  position: absolute;
+  right: 9.5%;
   margin-bottom: 40px;
 }
 
@@ -106,7 +106,7 @@
   top: 40%;
   left: -3%;
   /* margin-right: 40px; */
-  background-color: rgba(78, 78, 78, 0.5);
+  background-color: rgba(10, 10, 10, 0.5);
   background-size: 2em;
   padding: 6px;
   /* height: 180px; */
