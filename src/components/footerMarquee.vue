@@ -16,6 +16,7 @@ export default {
 <style scoped>
 p{
     font-size: 18px;
+    margin-top: 14px;
 }
 p::before{
     content:" \2022 ";
