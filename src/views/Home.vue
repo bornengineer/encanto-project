@@ -1,10 +1,8 @@
 <template>
-  <!-- <h1>This is an Home page</h1> -->
+  <slide/>
   <mainComp/>
   <footerMarquee />
   <hamburger/>
-  <slide/>
-  <!-- <socialIcons/> -->
 </template>
 
 <script>
