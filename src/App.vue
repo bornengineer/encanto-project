@@ -8,6 +8,18 @@
       </router-link>
       <h1>ENCANTO</h1>
     </div>
+    <div class="contInfo">
+      <span
+        ><a href="mailto:mail@encanto.com"
+          ><i class="fa fa-envelope"></i>&nbsp;mail@encanto.com</a
+        ></span
+      >
+      <span
+        ><a href="tel:+91-9425350689"
+          ><i class="fa fa-phone"></i>+91-9425350689</a
+        ></span
+      >
+    </div>
     <div id="navs">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -51,6 +63,24 @@
 <style scoped>
 * {
   box-sizing: border-box;
+}
+
+.contInfo {
+  position: fixed;
+  right: 10%;
+  margin-bottom: 40px;
+}
+
+.contInfo span a {
+  margin: 0 10px;
+  color: gray;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.4s ease;
+}
+
+.contInfo span a:hover {
+  color: white;
 }
 
 .container {
@@ -143,13 +173,14 @@
 
 #logotext h1 {
   color: white;
-  /* margin-top: 0px; */
+  margin-left: 20px;
   font-family: opensticks;
 }
 #navs {
   position: absolute;
   right: 2%;
   transition: all 0.5s ease;
+  margin-top: 20px;
 }
 
 img {
@@ -171,7 +202,7 @@ img:hover {
   src: url(./fonts/open/Opensticks-EOBW.ttf);
 }
 
-.container a {
+.container #navs a {
   font-weight: bold;
   font-family: monospace, arial;
   color: #a3a3a3;
@@ -183,32 +214,53 @@ img:hover {
 }
 
 @media (max-width: 960px) {
-  #logotext{
+  #logotext {
     margin: 0 0 0 -20px;
     transform: scale(0.65);
   }
   #navs {
-    margin: 0 -20px 0 0;
+    margin: 25px -20px 0 0;
     transform: scale(0.85);
+  }
+  .contInfo {
+    right: 12%;
+  }
+  .contInfo span a {
+    font-size: 13px;
   }
 }
 @media (max-width: 720px) {
-  #logotext{
+  #logotext {
     margin: 0 0 0 -40px;
-    transform: scale(0.60);
+    transform: scale(0.6);
   }
   #navs {
-    margin: 0 -50px 0 0;
+    margin: 28px -50px 0 0;
     transform: scale(0.7);
+  }
+  .contInfo {
+    right: 8%;
+  }
+  .contInfo span a {
+    font-size: 12px;
   }
 }
 @media (max-width: 540px) {
   #navs {
     display: none;
   }
+  .contInfo {
+    width: 130px;
+    margin-top: 35px;
+    margin-right: 25px;
+  }
+  .contInfo span a {
+    font-size: 10px;
+  }
+  #logotext{margin-right:20px;}
 }
 
-.container a::after {
+.container #navs a::after {
   content: "\00bb";
   font-size: 27px;
   margin: -15px 10px -15px 10px;
@@ -216,17 +268,17 @@ img:hover {
   transition: 0.5s;
 }
 
-.container a:hover::after {
+.container #navs a:hover::after {
   opacity: 1;
   padding-right: 10px;
 }
 
-.container a#logo:hover::after {
+.container #navs a#logo:hover::after {
   opacity: 0;
   padding-right: 0px;
 }
 
-.container a.router-link-exact-active {
+.container #navs a.router-link-exact-active {
   color: #ffffff;
 }
 </style>
