@@ -32,6 +32,7 @@ p::after{
   background-color: rgb(0, 46, 54);
   height: 30px;
   width: 100vw;
+  position:fixed;
   color: rgb(128, 128, 128);
 }
 </style>

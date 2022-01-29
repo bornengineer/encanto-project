@@ -1,8 +1,8 @@
 <template>
+  <hamburger/>
   <slide/>
   <mainComp/>
-  <footerMarquee />
-  <hamburger/>
+  <footerMarquee/>
 </template>
 
 <script>
