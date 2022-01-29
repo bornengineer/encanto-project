@@ -1,8 +1,8 @@
 <template>
-  <a @click.prevent.stop="toggle" href="javascript:void(0);" class="ham-toggle">
+  <a @click.prevent.stop="toggle" href="javascript:void(0);" class="ham-toggle sticky-top">
     <i class="fa fa-bars"></i>
   </a>
-  <div id="hamburger">
+  <div id="hamburger" class="sticky-top">
     <div v-if="cond" class="hamburger-list">
       <router-link class="ham-list" to="/">Home</router-link>
       <router-link class="ham-list" to="/about">About</router-link>
@@ -46,25 +46,24 @@ export default {
   margin-left: 3vw;
   margin-top: 5px;
 }
-#hamburger {
-  /* display: none; */
-}
+/* #hamburger {
+} */
 .ham-toggle {
   display: none;
   position: absolute;
-  right: 8vw;
-  top: 5vh;
+  right: 12vw;
+  top: 4vh;
   color: #a3a3a3;
   transform: scale(1.5);
   cursor: pointer;
 }
-@media (max-width: 660px) {
+@media (max-width: 540px) {
   .ham-toggle {
     display: block;
-    z-index: 10;
+    /* z-index: 10; */
   }
 }
-@media (min-width: 660px) {
+@media (min-width: 540px) {
   .hamburger-list {
     display: none;
   }

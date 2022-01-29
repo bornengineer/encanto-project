@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container sticky-top">
     <div id="logotext">
       <router-link id="logo" to="/">
         <img
@@ -44,20 +44,17 @@
       </ul>
     </div>
   </div>
-  <div>
-  <b-button>This is a button</b-button>
-  <b-button href="#">This is a link</b-button>
-</div>
   <router-view />
 </template>
 
 
 <style scoped>
-
-*{box-sizing: border-box;} 
+* {
+  box-sizing: border-box;
+}
 
 .container {
-  height: 100px;
+  height: 80px;
   max-width: 100%;
   /* border: 2px solid black; */
   margin: 0;
@@ -66,6 +63,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* border-bottom:4px solid rgba(22, 22, 22, 0.322); */
+  box-shadow: 0px 2px 8px 2px rgb(22, 22, 22);
 }
 .sicons {
   float: left;
@@ -78,26 +77,31 @@
   left: -3%;
   /* margin-right: 40px; */
   background-color: rgba(78, 78, 78, 0.5);
-  background-size:2em;
+  background-size: 2em;
   padding: 6px;
   /* height: 180px; */
   border-radius: 15px;
+  transform: scale(0.9);
+
   /* width: 100px; */
   transition: all 0.2s ease;
 }
-@media (max-width:960px){
-  .sicons{
-    left:-4%;
+@media (max-width: 960px) {
+  .sicons {
+    left: -4%;
+    transform: scale(0.9);
   }
 }
-@media (max-width:720px){
-  .sicons{
-    left:-5%;
+@media (max-width: 720px) {
+  .sicons {
+    left: -6%;
+    transform: scale(0.8);
   }
 }
-@media (max-width:540px){
-  .sicons{
-    left:-7%;
+@media (max-width: 540px) {
+  .sicons {
+    left: -9%;
+    transform: scale(0.7);
   }
 }
 .sicons:hover {
@@ -111,7 +115,7 @@
 }
 .sicons li {
   list-style: none;
-  margin:15px 10px 5px 10px;
+  margin: 15px 10px 5px 10px;
 }
 .sicons i {
   transform: scale(1.5);
@@ -132,7 +136,7 @@
 #logotext {
   display: flex;
   align-items: center;
-  transform: scale(0.85);
+  transform: scale(0.7);
   /* border: 2px solid black; */
   margin-left: 5vw;
 }
@@ -179,20 +183,26 @@ img:hover {
 }
 
 @media (max-width: 960px) {
-  #logotext,
+  #logotext{
+    margin: 0 0 0 -20px;
+    transform: scale(0.65);
+  }
   #navs {
-    margin: 0 -10px;
-    transform: scale(0.9);
+    margin: 0 -20px 0 0;
+    transform: scale(0.85);
   }
 }
 @media (max-width: 720px) {
-  #logotext,
+  #logotext{
+    margin: 0 0 0 -40px;
+    transform: scale(0.60);
+  }
   #navs {
-    margin: 0 -15px;
-    transform: scale(0.8);
+    margin: 0 -50px 0 0;
+    transform: scale(0.7);
   }
 }
-@media (max-width: 660px) {
+@media (max-width: 540px) {
   #navs {
     display: none;
   }
