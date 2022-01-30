@@ -60,6 +60,7 @@ span {
   align-items: center;
   margin-top: 10px;
   margin-left: 20px;
+  margin-bottom: 30px;
 }
 .gradient-text {
   background-color: red;
@@ -98,8 +99,8 @@ h3 {
   font-size: 20px;
 }
 img {
-  height: 110%;
-  width: 110%;
+  height: 100%;
+  width: 100%;
   transition: 0.3s ease-in-out;
 }
 .flexbox {
@@ -109,9 +110,9 @@ img {
   flex-direction: column;
 }
 #imgcontainer1 {
-  height: 250px;
-  max-width: 250px;
-  width: 250px;
+  height: 220px;
+  max-width: 220px;
+  width: 220px;
   background-color: rgba(75, 74, 74, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 2%;
@@ -120,14 +121,14 @@ img {
   /* margin: 0 40px 0 0; */
 }
 #imgcontainer2 {
-  height: 250px;
-  width: 500px;
-  max-width: 500px;
+  height: 220px;
+  width: 440px;
+  max-width: 440px;
   background-color: rgba(75, 74, 74, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 2%;
   border-radius: 3%;
-  margin: 0 0 10px 0;
+  /* margin: 0 0 10px 0; */
   position: relative;
 }
 
@@ -165,12 +166,12 @@ img:hover {
     width: 60vw;
   }
   #imgcontainer1 {
-    height: 220px;
-    width: 220px;
+    height: 200px;
+    width: 200px;
   }
   #imgcontainer2 {
-    height: 220px;
-    width: 440px;
+    height: 200px;
+    width: 400px;
   }
   h1{font-size:32px;}
   h3{font-size:20px;}
@@ -180,12 +181,12 @@ img:hover {
     width: 70vw;
   }
   #imgcontainer1 {
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
   }
   #imgcontainer2 {
-    height: 200px;
-    width: 400px;
+    height: 180px;
+    width: 360px;
   }
   h1{font-size:28px;}
   h3{font-size:18px;}
@@ -198,12 +199,12 @@ img:hover {
     flex-direction: column;
   }
   #imgcontainer1 {
-    height: 150px;
-    width: 150px;
+    height: 160px;
+    width: 160px;
   }
   #imgcontainer2 {
-    height: 150px;
-    width: 300px;
+    height: 160px;
+    width: 320px;
   }
   h1{font-size:22px;}
   h3{font-size:15px;}

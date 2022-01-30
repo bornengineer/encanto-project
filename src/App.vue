@@ -15,7 +15,7 @@
         ></span
       >
       <span
-        ><a href="tel:+91-9425350689"
+        ><a href="tel:+91-7869048146"
           ><i class="fa fa-phone"></i>+91-7869048146</a
         ></span
       >

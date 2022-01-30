@@ -1,7 +1,7 @@
  <template>
   <div
     id="carouselExampleCaptions"
-    class="carousel slide"
+    class="carousel slide carousel-fade"
     data-bs-ride="carousel"
   >
     <!-- <div class="carousel-indicators">
@@ -95,7 +95,7 @@
   width: 30vw;
   height: 20px;
   position: absolute;
-  left: 37%;
+  left: 36%;
   top:87%;
 }
 .caption-div h5 {
